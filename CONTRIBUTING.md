@@ -93,7 +93,7 @@ dotnet build Aquavit.slnx --configuration Release -warnaserror
 dotnet test Aquavit.slnx --configuration Release --no-build
 ```
 
-> **実装状況** — Phase 0 の Issue([#1](https://github.com/sumx21t-3310/Aquavit-VR/issues/1)、[#6](https://github.com/sumx21t-3310/Aquavit-VR/issues/6)〜[#9](https://github.com/sumx21t-3310/Aquavit-VR/issues/9))の実装に着手するまでは、リポジトリの整備としてオーナーが `main` へ直接 push しています。Phase 0 の実装からは、オーナーを含む全員が PR 経由で進めます。
+> **実装状況** — `main` にはブランチ保護を設定しています。マージには PR と、CI(`build-and-test`)の成功が必要です。承認は必須にしていません。force push とブランチの削除は禁止しています。保護は管理者には適用していないため、オーナーも規約として PR 経由で進めます。
 
 バグ報告・機能要望は `.github/ISSUE_TEMPLATE/` のテンプレートを使って Issue を立ててください。PR の本文は [`.github/PULL_REQUEST_TEMPLATE.md`](.github/PULL_REQUEST_TEMPLATE.md) に沿って記入してください。
 
