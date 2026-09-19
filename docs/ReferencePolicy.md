@@ -23,6 +23,7 @@ Aquavit VR は MIT ライセンスで配布します。GPL などの copyleft �
 | [Ladybird](https://github.com/LadybirdBrowser/ladybird) | BSD-2-Clause | ブラウザエンジン全体の実装例 |
 | [litehtml](https://github.com/litehtml/litehtml) | BSD-3-Clause | 軽量な HTML / CSS レンダラーの実装例 |
 | [Yoga](https://github.com/facebook/yoga)、[Taffy](https://github.com/DioxusLabs/taffy) | MIT | Flex Layout の実装例 |
+| [React](https://github.com/facebook/react)、[DaisyUI](https://github.com/saadeghi/daisyui)、[Tailwind CSS](https://github.com/tailwindlabs/tailwindcss)、[Bootstrap](https://github.com/twbs/bootstrap)、[Popper](https://github.com/floating-ui/floating-ui) | MIT | 動作を保証する対象(→ [TargetUsers](TargetUsers.md))。配布物を実行して検証し、必要な Web API を調べる |
 | [AngleSharp](https://github.com/AngleSharp/AngleSharp)、[AngleSharp.Css](https://github.com/AngleSharp/AngleSharp.Css)、[ExCSS](https://github.com/TylerBrinks/ExCSS) | MIT | C# の HTML / CSS パーサー |
 
 ライセンスは 2026-09-20 に、各リポジトリの GitHub 上の表示で確認しました。web-platform-tests は `LICENSE.md` の本文で確認しました。
@@ -35,7 +36,7 @@ Aquavit VR は MIT ライセンスで配布します。GPL などの copyleft �
 
 ## 開かないもの
 
-次の実装は、ソースコード、テスト、Issue、Pull Request、リポジトリ内のドキュメントを開きません。記事やチャットに引用されたコード片も対象です。
+次の実装はソースコード、テスト、Issue、Pull Request、リポジトリ内のドキュメントを閲覧してはいけません。記事やチャットに引用されたコード片も対象です。
 
 | 参照先 | 理由 |
 |---|---|

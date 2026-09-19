@@ -8,6 +8,7 @@
 
 | ページ | 内容 | 対象読者 |
 |---|---|---|
+| [TargetUsers](TargetUsers.md) | 想定する利用者と、動作を保証する範囲(React + DaisyUI、Bootstrap) | 利用者 / コントリビュータ |
 | [GettingStarted](GettingStarted.md) | 環境構築・ビルド・サンプルの実行 | 利用者 / コントリビュータ |
 | [Architecture](Architecture.md) | FloatSoda との共有境界・依存ルール・リポジトリ構成 | コントリビュータ |
 | [ReferencePolicy](ReferencePolicy.md) | 実装で参照してよい資料とコードの範囲(ライセンス) | コントリビュータ |
@@ -17,7 +18,8 @@
 ## どこから読むか
 
 - **まず動かしたい** → [GettingStarted](GettingStarted.md)
-- **設計を理解したい / コントリビュートしたい** → [Architecture](Architecture.md) → [ReferencePolicy](ReferencePolicy.md) → [APIDesign](APIDesign.md) → [DocumentationComments](DocumentationComments.md)
+- **何を目指しているかを知りたい** → [TargetUsers](TargetUsers.md)
+- **設計を理解したい / コントリビュートしたい** → [TargetUsers](TargetUsers.md) → [Architecture](Architecture.md) → [ReferencePolicy](ReferencePolicy.md) → [APIDesign](APIDesign.md) → [DocumentationComments](DocumentationComments.md)
 
 ## 全体像
 

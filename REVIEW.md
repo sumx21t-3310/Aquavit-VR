@@ -63,7 +63,7 @@ blocking にできるのは、重要度 1〜6 に該当し、かつ concrete fai
 
 **WebF のソースコードは、仕様の根拠としても参照しません**(必須)。開いてよい参照先と開かない参照先は [docs/ReferencePolicy.md](docs/ReferencePolicy.md) にあります。
 
-Aquavit VR は Web 標準の全体を実装しません。対象範囲は Phase ごとに、必要になった機能から広げます。**対象範囲の外にある機能が未実装であることは、指摘の対象にしません。** 対象範囲の中で Web 標準と挙動が異なる場合は、その差異が `docs/` か Issue に理由付きで書かれているかを確認します。
+Aquavit VR は Web 標準の全体を実装しません。最終的に動作を保証する範囲は [docs/TargetUsers.md](docs/TargetUsers.md) にあります(React + DaisyUI、Bootstrap)。対象範囲は Phase ごとに、その範囲を動かすのに必要になった機能から広げます。**対象範囲の外にある機能が未実装であることは、指摘の対象にしません。** 対象範囲の中で Web 標準と挙動が異なる場合は、その差異が `docs/` か Issue に理由付きで書かれているかを確認します。
 
 ---
 

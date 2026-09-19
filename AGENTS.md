@@ -33,6 +33,8 @@ Write output to the repository owner in Japanese: reports, review findings, comm
 
 Aquavit VR is a web UI framework for VR. The UI model is DOM / CSS / Layout / Paint, and the paint result is converted into the FloatSoda LayerTree. It is an independent framework, separate from FloatSoda's Widget / Element / RenderObject model.
 
+The target user is an experienced web frontend developer who writes React as usual and hands Aquavit VR the built `dist/` output (HTML, CSS, bundled and minified JavaScript). The contract with that user is "it behaves as it does in a browser", not Aquavit's own docs. The guaranteed scope is exactly two stacks: **React + DaisyUI (Tailwind CSS 4)** and **Bootstrap 5.3 including `bootstrap.js` and Popper**. Nothing beyond that is guaranteed. Judge whether a web feature is in scope by asking whether those stacks need it. Details and open decisions are in `docs/TargetUsers.md`.
+
 The roadmap is tracked as GitHub milestones (Phase 0 – Phase 4) and issues. `docs/Home.md` maps each Phase to its epic issue. The current phase is **Phase 0 - Engine Boundary** (POC, issue #1).
 
 ## Engine Boundary Rules (see `docs/Architecture.md`)
