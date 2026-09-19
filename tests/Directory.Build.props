@@ -1,0 +1,12 @@
+<Project>
+
+    <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+    <PropertyGroup>
+        <IsPackable>false</IsPackable>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <!-- SA0001: ドキュメント生成を無効にしたプロジェクトで StyleCop が出す通知。位置情報が無く .editorconfig では抑制できない -->
+        <NoWarn>$(NoWarn);SA0001</NoWarn>
+    </PropertyGroup>
+
+</Project>

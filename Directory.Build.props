@@ -1,0 +1,36 @@
+<Project>
+
+    <PropertyGroup>
+        <Version>0.0.1</Version>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Authors>Sumx21t</Authors>
+        <Copyright>Copyright (c) 2026 Sumx21t</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/sumx21t-3310/Aquavit-VR</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/sumx21t-3310/Aquavit-VR</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>steamvr;openvr;overlay;vr;ui;skiasharp;web;dom;css</PackageTags>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Roslynator.Analyzers" Version="4.13.1" PrivateAssets="all" />
+        <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.556" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" Link="stylecop.json" Visible="false" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="$(MSBuildThisFileDirectory)README.md" Pack="true" PackagePath="\" Visible="false" />
+    </ItemGroup>
+
+</Project>

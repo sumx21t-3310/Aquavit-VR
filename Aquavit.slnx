@@ -1,0 +1,11 @@
+<Solution>
+    <Folder Name="/src/">
+        <Project Path="src/Aquavit/Aquavit.csproj" />
+    </Folder>
+    <Folder Name="/samples/">
+        <Project Path="samples/Aquavit.Samples.LayerTree/Aquavit.Samples.LayerTree.csproj" />
+    </Folder>
+    <Folder Name="/tests/">
+        <Project Path="tests/Aquavit.Test/Aquavit.Test.csproj" />
+    </Folder>
+</Solution>
