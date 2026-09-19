@@ -1,0 +1,69 @@
+name: Feature request
+description: 新しい機能や API を提案する
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご提案ありがとうございます。
+        Aquavit VR は Web 標準の全体を実装しません。**対象範囲は Phase ごとに、必要になった機能から広げます**
+        (ロードマップは [docs/Home.md](https://github.com/sumx21t-3310/Aquavit-VR/blob/main/docs/Home.md))。
+        HTML / CSS / DOM の機能を提案する場合は、下の「対応する Web 標準」を先に確認していただくと議論が早く進みます。
+
+        **WebF、Kraken、Blink、WebKit、Servo、Gecko のソースコードは、この Issue に貼らないでください**
+        (→ [Reference Policy](https://github.com/sumx21t-3310/Aquavit-VR/blob/main/docs/ReferencePolicy.md))。
+
+  - type: textarea
+    id: behavior
+    attributes:
+      label: 希望する挙動 / API
+      description: どのように記述でき、どのように動作してほしいか。想定する HTML / CSS や C# のコードがあれば貼ってください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 動機 / ユースケース
+      description: どのような VR 向けの UI を作成したくて、現在何ができずに困っているか。
+    validations:
+      required: true
+
+  - type: dropdown
+    id: origin
+    attributes:
+      label: 対応する Web 標準はありますか
+      options:
+        - Web 標準に対応する機能がある
+        - Aquavit VR 独自の機能(Web 標準に相当するものが無い)
+        - わからない
+    validations:
+      required: true
+
+  - type: textarea
+    id: web-standard
+    attributes:
+      label: 対応する Web 標準(存在する場合)
+      description: |
+        仕様の節(WHATWG / W3C)や MDN へのリンクを書いてください。
+        挙動の一部だけが必要な場合は、その範囲も書いてください。
+    validations:
+      required: false
+
+  - type: textarea
+    id: why-original
+    attributes:
+      label: なぜ Aquavit VR に必要か(独自機能の場合)
+      description: |
+        Web 標準に相当するものが無い機能の場合、なぜ Aquavit VR に必要かを書いてください。
+        VR オーバーレイ固有の事情(OpenVR、HMD、ダッシュボード等)がある場合は、具体的に書いてください。
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 検討した代替案
+      description: 既存の API で回避を試した場合は、その結果も書いてください。
+    validations:
+      required: false

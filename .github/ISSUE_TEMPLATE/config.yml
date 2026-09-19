@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: ドキュメント
+    url: https://github.com/sumx21t-3310/Aquavit-VR/blob/main/docs/Home.md
+    about: ロードマップ(Phase)、アーキテクチャ、ビルドとサンプルの実行方法はこちらです。
+  - name: Reference Policy
+    url: https://github.com/sumx21t-3310/Aquavit-VR/blob/main/docs/ReferencePolicy.md
+    about: 実装で参照してよい資料とコードの範囲です。Issue や PR にコードを貼る前に確認してください。

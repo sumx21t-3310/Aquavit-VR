@@ -1,0 +1,120 @@
+name: Bug report
+description: Aquavit VR の不具合を報告する
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご報告ありがとうございます。**必須の欄だけ埋めれば十分です。**
+        描画に関する欄と Web 標準に関する欄は、該当する場合のみ記入してください。
+
+        **WebF、Kraken、Blink、WebKit、Servo、Gecko のソースコードは、この Issue に貼らないでください。**
+        Aquavit VR は MIT ライセンスで配布するため、これらのコードを参照せずに開発しています
+        (→ [Reference Policy](https://github.com/sumx21t-3310/Aquavit-VR/blob/main/docs/ReferencePolicy.md))。
+        ブラウザでの挙動は、コードではなく「何が表示されたか」で書いてください。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: バグの概要
+      description: 何が起きているかを簡潔に書いてください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: 最小再現コード / 再現手順
+      description: |
+        問題を再現できる最小の HTML / CSS と、それを読み込む C# のコードを貼ってください。コードで再現できない場合は手順を書いてください。
+      render: html
+      placeholder: |
+        <div style="display: flex; width: 200px">
+          <span>hello</span>
+        </div>
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待した挙動 (expected behavior)
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の挙動 (actual behavior)
+    validations:
+      required: true
+
+  - type: textarea
+    id: exception
+    attributes:
+      label: 例外 / スタックトレース
+      description: 例外が出た場合に貼ってください。
+      render: text
+    validations:
+      required: false
+
+  - type: input
+    id: aquavit-version
+    attributes:
+      label: Aquavit VR のバージョン
+      description: NuGet パッケージのバージョン、または試したコミットの SHA を記入してください。
+      placeholder: "0.0.1 / 868875e"
+    validations:
+      required: true
+
+  - type: input
+    id: dotnet-version
+    attributes:
+      label: .NET SDK のバージョン
+      description: "`dotnet --version` の出力を記入してください。"
+      placeholder: "10.0.100"
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: "Windows 11 26200"
+    validations:
+      required: true
+
+  - type: textarea
+    id: render-env
+    attributes:
+      label: 描画・VR 環境(表示や描画の問題の場合のみ)
+      description: |
+        描画が崩れる、オーバーレイが表示されないなどの場合に記入してください。
+        PNG に書き出すサンプルだけで再現する場合は、GPU / ドライバだけで構いません。
+      value: |
+        - GPU / ドライバ:
+        - HMD:
+        - SteamVR バージョン:
+    validations:
+      required: false
+
+  - type: textarea
+    id: web-standard
+    attributes:
+      label: Web 標準との対応(HTML / CSS / DOM の挙動に関係する場合のみ)
+      description: |
+        この欄は「Aquavit VR のバグ」「Web 標準どおりの挙動」「Aquavit VR の対象範囲の外」
+        を切り分けるための**任意**の欄です。分かる範囲で記入してください。空欄でも構いません。
+      value: |
+        - 対応する仕様の節(WHATWG / W3C / MDN の URL):
+        - ブラウザでの表示(ブラウザ名とバージョン、何が表示されたか):
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: スクリーンショット / 出力された PNG / ログ
+      description: 解決の参考になる場合のみ貼ってください。
+    validations:
+      required: false

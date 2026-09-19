@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.x'
+
+      # AGENTS.md の「警告 0 を保つ」をビルドで検査する
+      - name: Build
+        run: dotnet build Aquavit.slnx --configuration Release -warnaserror
+
+      - name: Test
+        run: dotnet test Aquavit.slnx --configuration Release --no-build
