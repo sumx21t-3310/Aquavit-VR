@@ -1,0 +1,11 @@
+# 改行コードを LF に固定する。
+# 利用者の Git 設定 (core.autocrlf) に左右されず、リポジトリと作業ツリーの両方を LF に揃える。
+* text=auto eol=lf
+
+# バイナリとして扱うファイル (差分と改行の変換の対象外)
+*.png binary
+*.jpg binary
+*.ico binary
+*.ttf binary
+*.otf binary
+*.woff2 binary
