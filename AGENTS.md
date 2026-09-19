@@ -42,9 +42,23 @@ The roadmap is tracked as GitHub milestones (Phase 0 – Phase 4) and issues. `d
 - When FloatSoda itself needs a change, make it in the FloatSoda repository and reference the released version here.
 - These rules are currently enforced only by `src/Aquavit/Aquavit.csproj`. Automated checking is tracked in issue #6.
 
-## Code Review and Test Perspectives
+## Repository Conventions
 
-Review criteria and test perspectives live in `REVIEW.md`: priorities, the bar for a finding, specification precedence, licensing and engine-boundary checks, and what a test must cover. Read it before reviewing a change and before writing tests. Keep the rules in `REVIEW.md` only, and link to it from here.
+Each convention has one home. Read that document before acting on a convention, and keep the rule text there only; link to it from here.
+
+| What you need | Where it lives |
+|---|---|
+| Issue labels, branch naming, PR scope, commit messages, test naming, namespace/directory layout, language of agent-facing files | `CONTRIBUTING.md` |
+| Code review criteria and test perspectives: priorities, the bar for a finding, specification precedence, licensing and engine-boundary checks, what a test must cover | `REVIEW.md` |
+| What may be referenced or ported (licensing) | `docs/ReferencePolicy.md` |
+| API design: web-standard APIs vs Aquavit's own APIs, immutability, `double`, keeping Skia types out of the DOM / Style / Layout API | `docs/APIDesign.md` |
+| XML documentation comments | `docs/DocumentationComments.md` |
+
+Three that catch agents out most often:
+
+- **Branch names carry the issue and the area, never the agent.** Use `<issue-number>-<primary-area>-<slug>`; no `codex/`, `claude/`, or `agent/` prefixes. Full rules in `CONTRIBUTING.md`.
+- **Test method names are `Member_条件_期待結果`, with the condition and the expectation in Japanese.** Full rules in `CONTRIBUTING.md`.
+- **Keep a PR to its issue.** Unrelated refactoring, renames, cleanup, and dependency changes go to a separate issue. Full rules in `CONTRIBUTING.md`.
 
 ## Build & Run Commands
 

@@ -7,6 +7,8 @@
 | 目的 | 置き場所 |
 |---|---|
 | エージェントの入口、Engine 境界のルール、ビルドと検証のコマンド | [AGENTS.md](AGENTS.md) |
+| 開発・コントリビューション規約(Issue とラベル / ブランチ命名 / PR のスコープ / テストの命名 / namespace) | [CONTRIBUTING.md](CONTRIBUTING.md) |
+| API 設計の規約 | [docs/APIDesign.md](docs/APIDesign.md) |
 | 参照してよい資料とコードの範囲 | [docs/ReferencePolicy.md](docs/ReferencePolicy.md) |
 | FloatSoda との共有境界と依存ルールの説明 | [docs/Architecture.md](docs/Architecture.md) |
 | Phase と Issue の対応 | [docs/Home.md](docs/Home.md) |
@@ -27,7 +29,7 @@
 2. **behavioral correctness** — 仕様どおりに動くか
 3. **tree lifecycle / state transitions** — DOM の追加・削除・差し替えと状態遷移が壊れていないか(Phase 2 以降)
 4. **incremental update correctness** — Style / Layout / Paint の dirty 伝播と再計算の範囲が正しいか(Phase 2 以降)
-5. **public API consistency** — 既存の API と一貫しているか
+5. **public API consistency** — 既存の API、[docs/APIDesign.md](docs/APIDesign.md) と一貫しているか
 6. **test coverage** — behavioral contract を押さえたテストがあるか
 7. **documentation consistency** — docs / XML ドキュメントコメントと実際の挙動が一致しているか
 8. **performance** — **concrete impact のあるもののみ**
@@ -42,7 +44,7 @@
 - **concrete failure mode を説明できる問題を優先します**(必須)。「どの入力・状態で、何が壊れるか」を書けない指摘は、書けるようになるまで優先度を下げてください。
 - **subjective な好みだけの指摘をしません**(必須)。規約・契約・失敗する条件のいずれにも紐づかない「私ならこう書く」という意見は指摘ではありません。
 - **hypothetical な問題を過剰に報告しません**(必須)。「将来こう使われたら壊れるかもしれない」という問題は、その使い方が実際に到達可能であることを示せる場合だけ挙げてください。
-- **Issue のスコープ外の改善要求を、安易に blocking にしません**(必須)。気づいた点は「別 Issue 向け」と明示し、非 blocking で伝えてください(→ 7章)。
+- **Issue のスコープ外の改善要求を、安易に blocking にしません**(必須)。気づいた点は「別 Issue 向け」と明示し、非 blocking で伝えてください(→ [CONTRIBUTING.md](CONTRIBUTING.md) の「PR のスコープ」)。
 - **既存コードがそうなっているという理由だけで、正しい仕様と判断しません**(必須)。次章の優先順位で確認してください。
 
 blocking にできるのは、重要度 1〜6 に該当し、かつ concrete failure mode を説明できる指摘です。重要度 7〜9 の指摘は、原則として非 blocking の提案として扱います。ただし、重要度 1 のうちライセンスに関する指摘は、failure mode の説明を待たずに blocking とします。
@@ -126,13 +128,13 @@ Web 標準に由来する機能では、**Aquavit VR 独自にテストケース
 - 観点の抜けを見ます。**該当するのに無い観点を指摘します**(必須)。
 - テストが observable behavior / behavioral contract / invariant を検証しているか(必須)。リファクタリングで壊れるものの挙動は正しい、というテストは指摘対象です。
 - バグ修正に regression test があるか(必須)。修正コードと同時に読み、「このテストは修正前に失敗したはずか」を判断してください。
-- テスト命名が `対象メンバー名_条件_期待結果` に従っているか(FloatSoda と同じ規約)。**既存テストの一括リネームは求めません。**
+- テスト命名が `対象メンバー名_条件_期待結果` に従っているか(規約は [CONTRIBUTING.md](CONTRIBUTING.md) の「テストの命名」)。**既存テストの一括リネームは求めません。**
 
 ---
 
 ## 6. namespace / ディレクトリ
 
-C# の namespace と、プロジェクトルート以下の物理ディレクトリ構造を一致させます(FloatSoda と同じ規約)。レビューでは、**namespace とディレクトリの片方だけが変わっていないか**を確認します(必須)。
+規約は [CONTRIBUTING.md](CONTRIBUTING.md) の「namespace とディレクトリ」にあります。レビューでは、**namespace とディレクトリの片方だけが変わっていないか**を確認します(必須)。
 
 ---
 
